@@ -1,32 +1,29 @@
-function kMeansExample(k)
+function kMeansExample(K)
 
 #initial Phase
 X=rand(2,30);
 
-for i= 1:k
+#centroids[2, k]
+for i= 1:K
   centroids(:,i)=X(:, randi([1,30])) ;
 end 
 counter = 1 ;
 
-
 #Looping Phase 
 while(counter)
-  counter=0 ; 
-
-	#Y[k,30]
-	Y=Edistance(x,centroids) ;
+	
+	#Y[30,K]
+	Y=Edistance(X, centroids, K) ;
 	#groups[30]	
 	groups=createGroups(Y);
-	centroids=reComputeCentroids(Y) ; 
-
-
-	endfor	
-
-
-
-
+	preiviousCent= centroids ;
+	centroids=reComputeCentroids(X, groups, K) 
+	if(preiviousCent==centroids)
+		break ;
+	endif
 
 endwhile
+
 
 
 
