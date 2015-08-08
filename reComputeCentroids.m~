@@ -1,14 +1,14 @@
 function centroids=reComputeCentroids(X, groups, K)
-K
 #X[2, 30] groups[30]
 	for i= 1:K
+i
 		a=0 ;
 		b=0 ; 		
 		points=0 ; 		
 		for j=1:size(X,2)
 			if(groups(j)==i)
-				a+=X(1, j) ;
-				b+=X(2, j) ;
+				a=a+X(1, j) ;
+				b=b+X(2, j) ;
 				points=points+1 
 			endif
 		endfor
