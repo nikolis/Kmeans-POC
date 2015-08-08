@@ -17,7 +17,7 @@ while(counter)
 	#groups[30]	
 	groups=createGroups(Y);
 	preiviousCent= centroids ;
-	centroids=reComputeCentroids(X, groups, K) 
+	centroids=reComputeCentroids(X, groups, K)  ;#ERROR
 	if(preiviousCent==centroids)
 		break ;
 	endif
