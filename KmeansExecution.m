@@ -8,14 +8,12 @@ function groupsFinal = KmeansExecution(K, X, numberOfExecutions)
 #errorValues=zeros(numberOfExecutions) ;
 
 for execution=1:numberOfExecutions
-execution
 	for i= 1:K
 		centroids(:,i)=X(:, randi([1,30])) ;
 	end 
 if(centroids(:,1)==centroids(:,2))
 	continue ; 
 endif
-centroids 
 	counter = 1 ;
 
 	#Looping Phase 

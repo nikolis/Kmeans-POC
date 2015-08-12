@@ -8,7 +8,6 @@ function groupsFinal = KmeansExecution(K, X, numberOfExecutions)
 #errorValues=zeros(numberOfExecutions) ;
 
 for execution=1:numberOfExecutions
-execution
 	for i= 1:K
 		centroids(:,i)=X(:, randi([1,30])) ;
 	end 
@@ -46,7 +45,7 @@ for i=i:numberOfExecutions
 	endif
 endfor
 
-groupsFinal = groupsLasten(minPosition) ; 
+groupsFinal = groupsLasten(minPosition,:) ; 
 
 
 
